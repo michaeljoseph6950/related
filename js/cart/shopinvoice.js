@@ -46,6 +46,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     });
 
     for(var i = 0; i < items.length; i++) {
+        console.log(items[i].theid)
 
         if((items[i].account).includes('CHECKING') || (items[i].account).includes('SPENDING')){
             var cartRow3 = document.createElement('div');
@@ -113,7 +114,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     }
 
 
-    for(var i = 0; i < items.length; i++) {
+    for(var i = 0; i < items.length ; i++) {
         var cartRow3 = document.createElement('div');
         cartRow3.classList.add('col-lg-3', 'col-xl-2', 'col-md-4', 'col-6');
         var balance2 = items[i].balance;
@@ -125,7 +126,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
             <div class="pricing-list">
                 <div class="pricing-list-price">
                     <h2 id=${(items[i].theid).replace('0','')}>
-                        
+                        ${(items[i].balance).replace('Balance: ', '')}
                     </h2>
                     <img src=${items[i].image} class="borderp">
                 </div>
@@ -181,6 +182,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 } else {
     document.getElementById('logsection').style.display = 'none';
     document.getElementById('logsection2').style.display = 'none';
+    document.getElementById('logsection3').style.display = 'none';
     document.getElementById('cartlength').style.display = 'none';
 }
 
