@@ -1,0 +1,257 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&amp;display=swap);
+.navbar-nav > li {
+  background-color: rgba(0, 115, 173, 0.4);
+}
+#avatar {
+  border: 1.4px solid rgba(0, 115, 173, 0.7);
+  border-radius: 50%;
+}
+#preloader:before {
+  border: 3px solid #0073ad;
+}
+#preloader:after {
+  border: 3px solid #0073ad;
+}
+a:hover,
+a:active {
+  color: #0073ad;
+  text-decoration: none;
+}
+.thegold {
+  background-color: rgba(0, 115, 173, 0.3);
+}
+@media screen and (max-width: 1092px) {
+  .navbar-nav{
+    border: 1.4px solid rgba(0, 115, 173, 0.7) !important;
+    box-shadow: 0px 5px 10px 0px rgba(0, 115, 173, 0.7);
+  }
+  .navbar-nav li {
+    border-bottom: 1.4px solid rgba(0, 115, 173, 0.3);
+  }
+  .navbar-toggler {
+    border: 1.4px solid #0073ad;
+  }
+  .navbar-toggler:after {
+    border-bottom: 2.5px solid #0073ad;
+  }
+  .navbar-toggler:before {
+    background: #0073ad;
+    border: 1.2px solid #0073ad;
+  }
+  .navbar-toggler.menu-opened:after {
+    background: #0073ad;
+  }
+  .navbar-toggler.menu-opened:after {
+    border: 1.4px solid #0073ad !important;
+  }
+  .navbar-toggler.menu-opened:before {
+    border: 1.4px solid #0073ad !important;
+  }
+  .navbar-toggler:after {
+    border-top: 2.5px solid #0073ad;
+  }
+}
+.attr-nav > ul > li.dropdown ul.dropdown-menu {
+  border: 1.4px solid rgba(0, 115, 173, 0.7) !important;
+  box-shadow: 0px 5px 10px 0px rgba(0, 115, 173, 0.7);
+}
+.attr-nav > ul > li.dropdown ul.dropdown-menu li {
+  border-bottom: 1.4px solid rgba(0, 115, 173, 0.3) !important;
+}
+.navbar-default {
+  border-bottom: 1.4px solid rgba(0, 115, 173, 0.49);
+}
+.footer-bar{
+  border: 1.4px solid rgba(0, 115, 173, 0.49);
+}
+
+.text-theme-color {
+  color: #0073ad;
+}
+blink {
+  background: #0073ad;
+}
+blink.high {
+  color: #0073ad;
+  border: 1.4px solid #0073ad;
+}
+.scroll-to-top {
+  border: 2px solid #0073ad;
+}
+.scroll-to-top:hover {
+  color: #0073ad;
+}
+.scroll-to-top:hover i {
+  color: #0073ad;
+}
+.scroll-to-top:visited {
+  color: #0073ad;
+}
+.t-head{
+  text-shadow: 0 0 1.4px rgba(0, 115, 173, 0.92);
+}
+.butn {
+  border: 1.4px solid #0073ad;
+}
+.scroll-down{
+  border: 1.4px solid #0073ad;
+}
+.butn.white.scroll-down:after{
+  background: #0073ad;
+}
+.butn.white.scroll-down > .fa-angle-down{
+  color: #0073ad;
+}
+.butn:after {
+  background: #0073ad;
+}
+.butn.white:hover {
+  border: 1.4px solid #0073ad;
+}
+.butn.in-cart {
+  border: 1.4px solid #0073ad !important;
+}
+.butn.in-cart:hover {
+  border: 1.4px solid #0073ad !important;
+}
+.section-heading h4:after {
+  background: #0073ad;
+}
+.money,
+#thetot1,
+.lesnar {
+  border: 1.4px solid #0073ad;
+}
+.gold {
+  border: 1.4px solid rgba(0, 115, 173, 0.8);
+}
+
+.gta,
+.gta-boa {
+  border: 1.4px solid rgba(0, 115, 173, 0.7);
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background-color: #0073ad;
+}
+.modal-body div p,
+.account {
+  border: 1.4px solid rgba(0, 115, 173, 0.3);
+}
+#profileModal .modal-content {
+  border: 1.4px solid rgba(0, 115, 173, 0.7) !important;
+  box-shadow: 0px 5px 10px 0px rgba(0, 115, 173, 0.3);
+}
+#profileModal .modal-header img,
+#exampleModal .modal-header .close img,
+.btn-remove {
+  border: 1.4px solid rgba(0, 115, 173, 0.7);
+}
+#exampleModal .modal-content {
+  border: 1.4px solid rgba(0, 115, 173, 0.7) !important;
+  box-shadow: 0px 5px 10px 0px rgba(0, 115, 173, 0.3);
+}
+.modal-body {
+  border: 1.4px solid rgba(0, 115, 173, 0.3);
+}
+.accordion-style .btn-link {
+  background: #0073ad !important;
+}
+.accordion-style .btn-link:hover {
+  background: #0073ad !important;
+}
+
+#canvas {
+  border: 1.4px solid #0073ad;
+}
+#canvas:hover {
+  box-shadow: 0 25px 30px 0 #0073ad;
+}
+#showtoasts,
+#showtoasts_2 {
+  border: 1.4px solid rgba(0, 115, 173, 0.7);
+}
+#text-to-copy,
+#text-to-copy-2 {
+  border: 1.4px solid rgba(0, 115, 173, 0.3);
+}
+.progress{
+  border: 1.4px solid rgba(0, 115, 173, 0.3);
+}
+
+.pricing-list {
+  border: 1.5px solid rgba(0, 115, 173, 0.49);
+}
+.pricing-list:hover {
+  box-shadow: 0 5px 10px 0 #0073ad;
+}
+.pricing-list.highlight {
+  background: rgba(0, 115, 173, 0.81);
+}
+
+.pricing-list ul li:after {
+  background: rgba(0, 115, 173, 0.25);
+}
+
+.pricing-list h2 {
+  color: rgba(0, 115, 173, 0.92);
+}
+.pricing-list ul li {
+  color: rgba(0, 115, 173, 0.92);
+}
+.bro-text p:after{
+	background: rgba(0, 115, 173, 0.92);
+}
+
+
+.port a img{
+  border: 1.4px solid rgba(0, 115, 173, 0.49);
+  border-bottom: none;
+}
+.port h4{
+  border: 1.4px solid rgba(0, 115, 173, 0.49);
+}
+.port:hover {
+  box-shadow: 0 3px 7px 0 rgba(0, 115, 173, 0.7);
+}
+#invoice-table,
+#modalsend {
+  border: 1.4px solid rgba(0, 115, 173, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 115, 173, 0.81);
+}
+.fa-toggle-on {
+  color: #0073ad;
+  border: 1.4px solid rgba(0, 115, 173, 0.3);
+}
+.fa-toggle-off {
+  color: #0073ad;
+  border: 1.4px solid rgba(0, 115, 173, 0.3);
+}
+#style-switcher {
+  box-shadow: 0px 7px 21px 0 rgba(0, 115, 173, 0.3);
+  border: 1.4px solid rgba(0, 115, 173, 0.3);
+}
+.filtering .butn {
+  border: 1.4px solid rgba(0, 115, 173, 0.81);
+  color: #0073ad;
+}
+.filtering .butn.white {
+  background: rgba(0, 115, 173, 0.81);
+}
+.filtering .butn.white:hover{
+  box-shadow: 0 1px 2px 0 #0073ad;
+  border: 1.4px solid #0073ad;
+  transform: scale(1.07);
+  color: #0073ad;
+}
+.filtering .butn > i {
+  color: #0073ad;
+}
+.filtering .butn.white:hover i{
+  color: #0073ad;
+  transition: all 0.7s ease;
+}

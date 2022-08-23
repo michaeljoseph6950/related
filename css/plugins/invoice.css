@@ -1,0 +1,58 @@
+.bg-animate{
+    background-position:0 0;
+    background-repeat:repeat-x;
+    animation:animatedBackground 70s linear infinite
+}
+@keyframes animatedBackground{
+    from{
+        background-position:0 0
+    }
+    to{
+        background-position:100% 0
+    }
+}
+#style-switcher{
+    top: 24%;
+}
+@media (max-width:592px){
+    #style-switcher{
+        top: 19%;
+    }
+}
+.therow{
+    margin-top: 55px;
+}
+@media screen and (max-width: 906px) {
+    .therow{
+        margin-top: 78px;
+    }
+}
+#predat{
+    display: none;
+    padding: 10px;
+    height: 100vh;
+}
+
+#predat div{
+    overflow-y: hidden !important;
+}
+#predat .section-heading h4{
+    color: #121d33;
+}
+.butn.home-btn{
+    background: yellow;
+    margin-top: 7vh;
+    color: #121d33 !important;
+    font-size: 24px;
+    line-height: 35px;
+    padding: 10px;
+}
+.butn.home-btn:hover{
+    border: 1.4px solid yellow;
+}
+.empty-cart{
+    background: rgba(255, 255, 255, 0.81);
+    border: 7px solid rgba(135, 206, 235, 0.7) !important;
+    padding: 43px;
+    margin-top: 35vh !important;
+}

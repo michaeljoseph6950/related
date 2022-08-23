@@ -1,0 +1,82 @@
+.bg-animate{
+    background-position:0 0;
+    background-repeat:repeat-x;
+    animation:animatedBackground 70s linear infinite
+}
+
+#confirm,
+#logs-invoice {
+    padding: 10px;
+    height: 100vh !important;
+}
+
+#confirm div, 
+#logs-invoice div {
+    overflow-y: hidden !important;
+}
+#confirm .section-heading h4,
+#logs-invoice .section-heading h4 {
+    color: #121d33;
+}
+#exampleInputEmail {
+	border-radius: 0 !important;
+	outline: 4px;
+	font-size: 21px !important;
+	box-shadow: 0 0 0 2px rgba(135, 206, 235, 0.7);
+	margin: 7px auto !important;
+	width: 100% !important;
+ }
+ .next {
+    text-align: center !important;
+    list-style-type: none !important;
+ }
+.butn.home-btn{
+    background: yellow;
+    margin-top: 5vh;
+    color: #121d33 !important;
+    font-size: 24px;
+    line-height: 35px;
+    padding: 10px;
+}
+.butn.home-btn img {
+    width: 27px;
+    border-radius: 7px;
+}
+.modal-footer .butn.home-btn{
+    margin-top: 3vh;
+}
+
+.butn.home-btn:hover{
+    border: 1.4px solid yellow;
+}
+
+.empty-cart{
+    background: rgba(255, 255, 255, 0.81);
+    border: 7px solid rgba(135, 206, 235, 0.7) !important;
+    padding: 43px;
+    margin-top: 35vh !important;
+}
+#yourEmail,
+#yourPhone {
+    font-weight: 700;
+}
+#email-invoice,
+#phone-invoice,
+#anon-invoice {
+    background: rgba(255, 255, 255, 0.81);
+    border: 7px solid rgba(135, 206, 235, 0.7) !important;
+    padding: 23px;
+    margin-top: 21vh !important;
+    display: none;
+}
+
+#loginModal .modal-body,
+#exampleModal .modal-body {
+    text-align: center !important;
+}
+#loginModal #signUp{
+    margin: 28px auto !important;
+}
+.thehr {
+    border: 0.7px solid rgba(135, 206, 235, 0.3);
+}
