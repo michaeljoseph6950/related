@@ -19,6 +19,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
         var info4 = `<td>${data.info4}</td>`
         var info5 = `<td>${data.info5}</td>`
         var info6 = `<td>${data.info6}</td>`
+        var theid = `<td>${data.theid}</td>`
         
         table1.row.add([
             image,
@@ -32,7 +33,8 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
             info4,   
             info5,   
             info6,   
-            website,      
+            website,     
+            theid 
         ]).draw();
     });
 
@@ -65,12 +67,13 @@ function addToCartClicked(event) {
     var info4 = button.parentElement.parentElement.children[4].children[0].innerText;
     var info5 = button.parentElement.parentElement.children[5].children[0].innerText;
     var info6 = button.parentElement.parentElement.children[6].children[0].innerText;
+    var theid = button.parentElement.parentElement.children[8].children[0].innerText;
 
     var image = button.parentElement.parentElement.parentElement.children[0].children[0].src;
     var accoun = button.parentElement.parentElement.children[7].children[0].innerText;
     var account = accoun.replace(' ACCOUNT]',']')
 
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6);
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6, theid);
     updateCartTotal();
 
     if (localStorage.getItem('received-funds') != null){
@@ -94,12 +97,13 @@ function removeCartItem(event) {
     var info4 = cartItem.children[8].innerText;
     var info5 = cartItem.children[9].innerText;
     var info6 = cartItem.children[10].innerText;
-    removeItemFromCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6);
+    var theid = cartItem.children[12].innerText;
+    removeItemFromCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,theid);
     buttonClicked.parentElement.parentElement.remove();
     updateCartTotal2()
 }
 
-function addItemToCart(price, balance, account,website, image,info1,info2,info3,info4,info5,info6){
+function addItemToCart(price, balance, account,website, image,info1,info2,info3,info4,info5,info6, theid){
 
     var image1 = `<td><img src=${image}></td>`
     var balance1 = `<td class="btn-balance">${balance}</td>`
@@ -113,6 +117,7 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
     var info41 = `<td>${info4}</td>`
     var info51 = `<td>${info5}</td>`
     var info61 = `<td>${info6}</td>`
+    var theid1 = `<td>${theid}</td>`
 
     if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
         var cartItemNames = JSON.parse(localStorage.getItem('banklogs'));
@@ -127,7 +132,7 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
         console.log('Hello')
     }
 
-    addToLocalStorage(price, balance, account,website,image,info1,info2,info3,info4,info5,info6);
+    addToLocalStorage(price, balance, account,website,image,info1,info2,info3,info4,info5,info6, theid);
 
     table1.row.add([
         image1,
@@ -141,7 +146,8 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
         info41,   
         info51,   
         info61,   
-        website1,      
+        website1, 
+        theid1     
     ]).draw();
 
     updateCartTotal();
@@ -154,7 +160,7 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
 }
 
 
-function addToLocalStorage(price, balance, account,website, image,info1,info2,info3,info4,info5,info6){
+function addToLocalStorage(price, balance, account,website, image,info1,info2,info3,info4,info5,info6,theid){
     let item = {
         price: price,
         balance: balance,
@@ -166,7 +172,8 @@ function addToLocalStorage(price, balance, account,website, image,info1,info2,in
         info3: info3,
         info4: info4,
         info5: info5,
-        info6: info6
+        info6: info6,
+        theid: theid
     }
     items.push(item);
     localStorage.setItem('banklogs', JSON.stringify(items));
@@ -176,7 +183,7 @@ function addToLocalStorage(price, balance, account,website, image,info1,info2,in
     }
 }
 
-function removeItemFromCart(price, balance,account,website,image,info1,info2,info3,info4,info5,info6){
+function removeItemFromCart(price, balance,account,website,image,info1,info2,info3,info4,info5,info6,theid){
     let item = {
         price: price,
         balance: balance,
@@ -188,7 +195,8 @@ function removeItemFromCart(price, balance,account,website,image,info1,info2,inf
         info3: info3,
         info4: info4,
         info5: info5,
-        info6: info6
+        info6: info6,
+        theid: theid,
     }
     function checkAdult(items) {
         return JSON.stringify(items) !== JSON.stringify(item)
