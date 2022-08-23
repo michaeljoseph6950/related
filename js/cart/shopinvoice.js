@@ -112,6 +112,65 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
         }
     }
 
+
+    for(var i = 0; i < items.length; i++) {
+        var cartRow3 = document.createElement('div');
+        cartRow3.classList.add('col-lg-3', 'col-xl-2', 'col-md-4', 'col-6');
+        var balance2 = items[i].balance;
+        var price2 = items[i].price;
+        var balance3 = balance2.replace('Balance: ', '');
+        var price3 = price2.replace('Price: ', 'In Cart: ');
+        var cartItems3 = document.getElementsByClassName('xenon4')[0];
+        var cartRowContents3 = `
+            <div class="pricing-list">
+                <div class="pricing-list-price">
+                    <h2 id=${(items[i].theid).replace('0','')}>
+                        
+                    </h2>
+                    <img src=${items[i].image} class="borderp">
+                </div>
+                <ul>
+                    <li>${items[i].website} </li>
+                    <li>${items[i].info1} </li>
+                    <li>${items[i].info2} </li>
+                    <li>${items[i].info3} </li>
+                    <li>${items[i].info4} </li>
+                    <li>${items[i].info5} </li>
+                    <li>${items[i].info6} </li>
+                    <li>${(items[i].account).replace('[','<br>[').replace(']',' ACCOUNT]')}</li>
+                    <button type="submit" class="butn" id=${items[i].theid}>
+                        ${items[i].price}
+                    </button>
+                </ul>
+            </div>
+        `;
+        cartRow3.innerHTML = cartRowContents3;
+        cartItems3.prepend(cartRow3);
+    }
+
+    document.getElementById('iboa01').innerText = "Buy: $"+parseFloat((localStorage.getItem("boa1").replace("$","").replace(",","")/25).toFixed(0)).toLocaleString();
+    document.getElementById('ichase01').innerText = "Buy: $"+parseFloat((localStorage.getItem("chase1").replace("$","").replace(",","")/25).toFixed(0)).toLocaleString();
+    document.getElementById('ichime01').innerText = "Buy: $"+parseFloat((localStorage.getItem("chime1").replace("$","").replace(",","")/25).toFixed(0)).toLocaleString();
+    document.getElementById('iciti01').innerText = "Buy: $"+parseFloat((localStorage.getItem("citi1").replace("$","").replace(",","")/25).toFixed(0)).toLocaleString();
+    document.getElementById('ihunt01').innerText = "Buy: $"+parseFloat((localStorage.getItem("hunt1").replace("$","").replace(",","")/25).toFixed(0)).toLocaleString();
+    document.getElementById('infcu01').innerText = "Buy: $"+parseFloat((localStorage.getItem("nfcu1").replace("$","").replace(",","")/25).toFixed(0)).toLocaleString();
+    document.getElementById('ipnc01').innerText = "Buy: $"+parseFloat((localStorage.getItem("pnc1").replace("$","").replace(",","")/25).toFixed(0)).toLocaleString();
+    document.getElementById('itruist01').innerText = "Buy: $"+parseFloat((localStorage.getItem("truist1").replace("$","").replace(",","")/25).toFixed(0)).toLocaleString();
+    document.getElementById('iwells01').innerText = "Buy: $"+parseFloat((localStorage.getItem("wells1").replace("$","").replace(",","")/25).toFixed(0)).toLocaleString();
+    document.getElementById('iwood01').innerText = "Buy: $"+parseFloat((localStorage.getItem("wood1").replace("$","").replace(",","")/25).toFixed(0)).toLocaleString();
+
+    document.getElementById('iboa1').innerText = localStorage.getItem('boa1');
+    document.getElementById('ichase1').innerText = localStorage.getItem('chase1');
+    document.getElementById('ichime1').innerText = localStorage.getItem('chime1');
+    document.getElementById('iciti1').innerText = localStorage.getItem('citi1');
+    document.getElementById('ihunt1').innerText = localStorage.getItem('hunt1');
+    document.getElementById('infcu1').innerText = localStorage.getItem('nfcu1');
+    document.getElementById('ipnc1').innerText = localStorage.getItem('pnc1');
+    document.getElementById('itruist1').innerText = localStorage.getItem('truist1');
+    document.getElementById('iwells1').innerText = localStorage.getItem('wells1');
+    document.getElementById('iwood1').innerText = localStorage.getItem('wood1');
+
+
     updateCartTotal();
 
     var removeFromCartButtons = document.getElementsByClassName('btn-remove');
