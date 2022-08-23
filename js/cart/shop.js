@@ -66,7 +66,7 @@ function addToCartClicked(event) {
     var info5 = button.parentElement.parentElement.children[5].children[0].innerText;
     var info6 = button.parentElement.parentElement.children[6].children[0].innerText;
 
-    var image = button.parentElement.parentElement.children[8].children[0].innerText;
+    var image = button.parentElement.parentElement.parentElement.children[0].children[0].src;
     var accoun = button.parentElement.parentElement.children[7].children[0].innerText;
     var account = accoun.replace(' ACCOUNT]',']')
 
