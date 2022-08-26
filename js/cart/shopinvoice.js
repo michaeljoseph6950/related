@@ -46,7 +46,75 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     });
 
     for(var i = 0; i < items.length; i++) {
-        console.log(items[i].theid)
+        console.log('boa' + (items[i].theid).substring((items[i].theid).indexOf('0') + 1));
+        console.log('chase' + (items[i].theid).substring((items[i].theid).indexOf('0') + 1));
+        console.log('chime' + (items[i].theid).substring((items[i].theid).indexOf('0') + 1));
+        console.log('citi' + (items[i].theid).substring((items[i].theid).indexOf('0') + 1));
+        console.log('hunt' + (items[i].theid).substring((items[i].theid).indexOf('0') + 1));
+        console.log('nfcu' + (items[i].theid).substring((items[i].theid).indexOf('0') + 1));
+        console.log('pnc' + (items[i].theid).substring((items[i].theid).indexOf('0') + 1));
+        console.log('truist' + (items[i].theid).substring((items[i].theid).indexOf('0') + 1));
+        console.log('wells' + (items[i].theid).substring((items[i].theid).indexOf('0') + 1));
+        console.log('wood' + (items[i].theid).substring((items[i].theid).indexOf('0') + 1));
+
+
+        var cartRow3 = document.createElement('div');
+        cartRow3.classList.add('col-lg-3', 'col-xl-2', 'col-md-4', 'col-6');
+        var cartItems3 = document.getElementsByClassName('xenon4')[0];
+        var cartRowContents3 = `
+            <div class="pricing-list">
+                <div class="pricing-list-price">
+                    <h2 id="boa1">boa</h2>
+                    <img src="img/partners/banklogo.png" class="borderp">
+                </div>
+                <ul>
+                    <li>https://secure.bankofamerica.com/auth/</li>
+                    <li>Username + Password</li>
+                    <li>Account& Routing No</li>
+                    <li>Social Security No.</li>
+                    <li>Date of Birth</li>
+                    <li>ClientIP + UserAgent</li>
+                    <li>Name+ Email access</li>
+                    <li>Bank of America <br> [SAVINGS ACCOUNT]</li>
+                    <button type="submit" class="butn" id=${items[i].theid}>
+                        boa
+                    </button>
+                </ul>
+            </div>
+        `;
+        cartRow3.innerHTML = cartRowContents3;
+        cartItems3.prepend(cartRow3);
+
+
+        var cartRow3 = document.createElement('div');
+        cartRow3.classList.add('col-lg-3', 'col-xl-2', 'col-md-4', 'col-6');
+        var cartItems3 = document.getElementsByClassName('xenon4')[0];
+        var cartRowContents3 = `
+            <div class="pricing-list">
+                <div class="pricing-list-price">
+                    <h2 id="boa1">chime</h2>
+                    <img src="img/partners/banklogo.png" class="borderp">
+                </div>
+                <ul>
+                    <li>https://secure.bankofamerica.com/auth/</li>
+                    <li>Username + Password</li>
+                    <li>Account& Routing No</li>
+                    <li>Social Security No.</li>
+                    <li>Date of Birth</li>
+                    <li>ClientIP + UserAgent</li>
+                    <li>Name+ Email access</li>
+                    <li>Bank of America <br> [SAVINGS ACCOUNT]</li>
+                    <button type="submit" class="butn" id=${items[i].theid}>
+                        chime
+                    </button>
+                </ul>
+            </div>
+        `;
+        cartRow3.innerHTML = cartRowContents3;
+        cartItems3.prepend(cartRow3);
+
+        
+
 
         if((items[i].account).includes('CHECKING') || (items[i].account).includes('SPENDING')){
             var cartRow3 = document.createElement('div');
@@ -114,40 +182,6 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     }
 
 
-    for(var i = 0; i < items.length ; i++) {
-        var cartRow3 = document.createElement('div');
-        cartRow3.classList.add('col-lg-3', 'col-xl-2', 'col-md-4', 'col-6');
-        var balance2 = items[i].balance;
-        var price2 = items[i].price;
-        var balance3 = balance2.replace('Balance: ', '');
-        var price3 = price2.replace('Price: ', 'In Cart: ');
-        var cartItems3 = document.getElementsByClassName('xenon4')[0];
-        var cartRowContents3 = `
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id=${(items[i].theid).replace('0','')}>
-                        ${(items[i].balance).replace('Balance: ', '')}
-                    </h2>
-                    <img src=${items[i].image} class="borderp">
-                </div>
-                <ul>
-                    <li>${items[i].website} </li>
-                    <li>${items[i].info1} </li>
-                    <li>${items[i].info2} </li>
-                    <li>${items[i].info3} </li>
-                    <li>${items[i].info4} </li>
-                    <li>${items[i].info5} </li>
-                    <li>${items[i].info6} </li>
-                    <li>${(items[i].account).replace('[','<br>[').replace(']',' ACCOUNT]')}</li>
-                    <button type="submit" class="butn" id=${items[i].theid}>
-                        ${items[i].price}
-                    </button>
-                </ul>
-            </div>
-        `;
-        cartRow3.innerHTML = cartRowContents3;
-        cartItems3.prepend(cartRow3);
-    }
 
     document.getElementById('iboa01').innerText = "Buy: $"+parseFloat((localStorage.getItem("boa1").replace("$","").replace(",","")/25).toFixed(0)).toLocaleString();
     document.getElementById('ichase01').innerText = "Buy: $"+parseFloat((localStorage.getItem("chase1").replace("$","").replace(",","")/25).toFixed(0)).toLocaleString();
